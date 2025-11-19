@@ -1,0 +1,25 @@
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# Build systems
+target/
+build/
+out/
+bin/
+pom.xml
+*.jar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled Java
+**/*.class
+
+# Temporary
+*.tmp
+*.log
