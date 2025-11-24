@@ -32,7 +32,7 @@ java-challenges/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/java-challenges.git
+git clone https://github.com/afgHaleek/java-challenges.git
 cd java-challenges
 
 2. Compile the project
