@@ -55,13 +55,6 @@ manual to lower: hello world
 No of words in a string: 2
 
 
-How to Run
-Compile: javac StringManipulation.java
-Execute: java StringManipulation
-Enter a string when prompted
-
-
-
 #Technical Notes
 All implementations work at the character level for educational purposes
 Handles edge cases: empty strings, multiple spaces, mixed case

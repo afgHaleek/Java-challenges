@@ -2,11 +2,5 @@
 **Difficulty:** 0/100
 
 ### 🎯 Goal
-Create a simple program that prints `Hello, World!` to the console.
+Create a simple program that returns `Hello, World!`.
 
-### 📚 Concepts Covered
-- Java program structure (`class`, `main` method).
-- Printing to console with `System.out.println`.
-- Package declaration.
-
-### ✅ Example Output

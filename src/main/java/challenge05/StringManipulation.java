@@ -3,34 +3,34 @@ package challenge05;
 import java.util.Scanner;
 
 public class StringManipulation {
-    public static void main(String... args) {
-        System.out.println("########### STRING MANIPULATION AND ANALYSIS PROGRAM ###########");
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter string (sentence or word) : ");
-        String string = sc.nextLine();
-
-        if (string.isEmpty()) System.out.println("you entered empty string!");
-        countAndDisplayTheNumberOfChars(string);
-        System.out.println("string reversed: " + reverseString(string));
-        System.out.println("is Palindrome : " + manualIsPalindrome(string));
-        System.out.println("Manual to upper: " + manualToUpper(string));
-        System.out.println("manual to lower: "+ manualToLower(string));
-        System.out.println("No of words in a string: " + countWords(string));
-
-
-    }
-
-    public static void countAndDisplayTheNumberOfChars(String s) {
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Returns a formatted string containing all non-space characters in the input string,
+     * with each character followed by a space and a newline character at the end,
+     * followed by the total number of non-space characters.
+     *
+     * @param s the input string
+     * @return the formatted string
+     */
+/* <<<<<<<<<<  a4eb31bb-19ee-4a9d-a322-6d3e19acaa19  >>>>>>>>>>> */
+    public static String countCharsFormatted(String s) {
         int noOfChars = 0;
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == ' ') continue;
-            System.out.print(s.charAt(i) + " ");
+            char c = s.charAt(i);
+            if (c == ' ') continue;
+
+            sb.append(c).append(" ");
             noOfChars++;
         }
 
-        System.out.println("\nTotal number of chars in the string: " + noOfChars);
+        if (!sb.isEmpty()) {
+            sb.setLength(sb.length() - 1);
+        }
+
+        sb.append("\nTotal: ").append(noOfChars);
+        return sb.toString();
 
     }
 
@@ -67,6 +67,16 @@ public class StringManipulation {
 
     }
 
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Converts a given string to uppercase by manually iterating
+     * through each character and subtracting 32 from the ASCII value
+     * of each character.
+     *
+     * @param s the string to convert
+     * @return the converted string
+     */
+/* <<<<<<<<<<  8ac58748-dd75-477c-869c-485666baf177  >>>>>>>>>>> */
     public static String manualToUpper(String s) {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
@@ -78,6 +88,16 @@ public class StringManipulation {
         return new String(chars);
     }
 
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Converts a given string to lowercase by manually iterating
+     * through each character and adding 32 to the ASCII value
+     * of each character.
+     *
+     * @param s the string to convert
+     * @return the converted string
+     */
+/* <<<<<<<<<<  fdc29e96-e7cd-4a68-a195-f001460739d6  >>>>>>>>>>> */
     public static String manualToLower(String s) {
         char[] chars = s.toCharArray();
         for (int i=0; i < chars.length; i++) {
@@ -89,6 +109,19 @@ public class StringManipulation {
         return new String(chars);
     }
 
+/* <<<<<<<<<<<<<<  ✨ Windsurf Command ⭐ >>>>>>>>>>>>>>>> */
+    /**
+     * Counts the number of words in a given string.
+     *
+     * The method uses a state machine to track when entering/exiting words.
+     * It iterates through each character in the string, and if the character
+     * is not a space, it increments the count and sets the inWord flag to true.
+     * If the character is a space, it resets the inWord flag to false.
+     *
+     * @param s the string to count words in
+     * @return the number of words in the string
+     */
+/* <<<<<<<<<<  e08a6a80-8b79-44ff-b4f4-c904bec980d4  >>>>>>>>>>> */
     public static int countWords(String s) {
         int count = 0;
         boolean inWord = false;
