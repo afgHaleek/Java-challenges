@@ -23,6 +23,8 @@ java-challenges/
 │ ├─ challenge03/NumberClassification.java
 │ ├─ challenge04/ArrayOperations.java
 │ └─ challenge05/StringManipulation.java
+  |_ challenge06/userValidationService.java
+  |_ challenge07/userRegistrationService.java
 │
 └─ src/test/java/
 └─ ... (JUnit test classes corresponding to challenges)
