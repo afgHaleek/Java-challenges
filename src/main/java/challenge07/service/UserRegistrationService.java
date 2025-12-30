@@ -6,6 +6,7 @@ import challenge07.model.User;
 import challenge07.repository.UserRepository;
 import challenge06.service.UserValidationService;
 import challenge06.exceptions.*;
+import challenge07.security.PasswordHasher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,8 @@ public class UserRegistrationService {
             throw new UserAlreadyExistsException("User already exists!");
         }
 
-        User user = new User(username, password, email, age);
+        String hashedPassword = PasswordHasher.hash(password);
+        User user = new User(username, hashedPassword, email, age);
 
 
 

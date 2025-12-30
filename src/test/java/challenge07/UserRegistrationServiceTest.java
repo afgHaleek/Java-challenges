@@ -6,6 +6,7 @@ import challenge07.exception.UserAlreadyExistsException;
 import challenge07.model.User;
 import challenge07.repository.InMemoryUserRepository;
 import challenge07.repository.UserRepository;
+import challenge07.security.PasswordHasher;
 import challenge07.service.UserRegistrationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -108,7 +109,8 @@ public class UserRegistrationServiceTest {
         assertEquals("khan", saved.username());
         assertEquals(25, saved.age());
         assertEquals("khan@gmail.com", saved.email());
-        assertEquals("pass1234", saved.password());
+        String hashedPass = PasswordHasher.hash("pass1234");
+        assertEquals(hashedPass, saved.password());
     }
 
     @Test
