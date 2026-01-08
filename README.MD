@@ -52,7 +52,7 @@ ___How Java actually works___
 13. [ ] │   ├─ challenge09/   // OTP & two-factor authentication
 14. [ ] │   ├─ challenge10/   // TCP client/server networking
 15. [ ] │   ├─ challenge11/   // Multi-client broadcast chat server
-16. [ ] │
+16. [ ] │      |-- challenge12/ // In-memory job processing system
 17. [ ] └─ src/test/java/
 18. [ ] └─ ...            // JUnit tests per challenge
 
