@@ -54,6 +54,7 @@ ___How Java actually works___
 15. [ ] │   ├─ challenge11/   // Multi-client broadcast chat server
 16. [ ] │      |-- challenge12/ // In-memory job processing system
 17. [ ] │      |-- challenge13/ // Thread-safe LRU cache
+18. [ ] │      |-- challenge14/ // Concurrent job processing system
 17. [ ] └─ src/test/java/
 18. [ ] └─ ...            // JUnit tests per challenge
 
